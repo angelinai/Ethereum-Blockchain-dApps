@@ -1,7 +1,8 @@
 # Ethereum Solidity Examples
-Ethereum Solidity Demo Examples
 
-## Deploy via Truffle
+## Ethereum Solidity Demo Examples
+
+### Deploy via Truffle
 
  ``` > truffle compile ```
 
@@ -11,7 +12,7 @@ Ethereum Solidity Demo Examples
 
   ```  > truffle migrate --network development ```
 
-### Truffle Config file > truffle.js 
+  Truffle Config file   ```  truffle.js   ```
 ----
 ```
 module.exports = {
