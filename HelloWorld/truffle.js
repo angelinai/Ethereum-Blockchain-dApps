@@ -20,6 +20,18 @@ module.exports = {
       host: "localhost", // local testRPC host
       port: 8545, // local testRPC port
       network_id: "*" // Match any network id
+    },
+     // Plan for remote testing, enter credentials for remote testnet
+     staging: {  // you call it whatever your hear's desire
+      host: "xxx", // Ehtereum RPC endpoint- no http or https, just host
+      port: 1111, //  Ehtereum RPC port
+      network_id: "*" // Match any network id
+    },
+    // Plan for production, enter credentials for mainnet
+    production: {
+      host: "xxx", // Ehtereum RPC endpoint - no http or https, just host 
+      port: 1111, //  Ehtereum RPC port
+      network_id: "*" // Match any network id
     }
   }
 };
