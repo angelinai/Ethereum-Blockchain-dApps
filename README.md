@@ -1,2 +1,2 @@
-# Ethereum-Solidity
+# Ethereum Solidity Examples
 Ethereum Solidity Demo
