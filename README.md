@@ -1,6 +1,7 @@
 # Ethereum Solidity Examples
 
 This is a very basic intro repo with solidity contracts. It's intended to be a display for educational purpose only.
+I've used Truffle for project templated, truffle is also the general tool used for compiling.
 
 ## Ethereum Solidity Demo Examples
 
