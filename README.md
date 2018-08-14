@@ -4,9 +4,10 @@ This is a very basic intro repo with solidity contracts. It's intended to be a d
 I've used Truffle for project templated, truffle is also the general tool used for compiling.
  
 ## Project Folders Outline
----
+ 
 ## HelloWorld folder
- Basic hello world implementaion.
+
+Basic hello world implementaion.
 
 ## FoodSafe folder   
 
