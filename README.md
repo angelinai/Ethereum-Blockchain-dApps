@@ -6,28 +6,28 @@ I've used Truffle for project templated, truffle is also the general tool used f
 ## Project Folders Outline
 ---
 ## HelloWorld folder
- - Basic hello world implementaion.
+ Basic hello world implementaion.
 
 ## FoodSafe folder   
 
-End to end sample app with Ethereum.
+End to end sample app(dapp) with Ethereum.
 
-Goals
+  Goals
 
-Interact with Ethereum
+  Interact with Ethereum
 
-Utilize Truffle Client
+  Utilize Truffle Client
 
-Interact Web3.js
-		> Make RPC calls on our behalf
+  Interact Web3.js
+      > Make RPC calls on our behalf
 
-Utilize the power of Metamask
-		> All interaction with accounts yeasy to do
-		> All plumbing for authentication is done easily
-		
+  Utilize the power of Metamask
+      > All interaction with accounts yeasy to do
+      > All plumbing for authentication is done easily
+      
 
-Utilize Webpack
-		> Take all assets through the webpack module bundler
+  Utilize Webpack
+      > Take all assets through the webpack module bundler
 
 ## Deployment
 ---
