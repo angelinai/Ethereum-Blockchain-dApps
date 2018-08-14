@@ -1,5 +1,7 @@
 # Ethereum Solidity Examples
 
+This is a very basic intro repo with solidity contracts. It's intended to be a display for educational purpose only.
+
 ## Ethereum Solidity Demo Examples
 
 ### Deploy via Truffle
