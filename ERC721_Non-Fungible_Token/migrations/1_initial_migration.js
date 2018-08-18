@@ -1,5 +1,6 @@
-var Migrations = artifacts.require("./Migrations.sol");
+var Monsters = artifacts.require("./CryptoMonsters.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Migrations);
+ 
+  deployer.deploy(Monsters);
 };
