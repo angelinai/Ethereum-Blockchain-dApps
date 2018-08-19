@@ -8,7 +8,7 @@ contract CryptoMonsters is ERC721BasicToken
     struct Monster {
         string name;
         uint level;
-        uint attachPower;
+        uint attackPower;
         uint defensePower;        
     }
 
@@ -18,12 +18,12 @@ contract CryptoMonsters is ERC721BasicToken
 
     
     // CONSTRUCTOR - keep track of owner and owner address in constructor
-   /* constructor() public {
-       owner = msg.sender;
-    } */
-    function CryptoMonsters() public {  // use it as function for now, TBD change to constructor()
+    constructor() public {
         owner = msg.sender;
-    }
+    }  
+    /*  function CryptoMonsters() public {  // use it as function for now, TBD change to constructor()
+        owner = msg.sender;
+    }*/
  
    /**
    * @dev Create new monster, with name _monsterName and address owner _ownerToAddress
@@ -35,7 +35,7 @@ contract CryptoMonsters is ERC721BasicToken
         // pre-checks
         require(owner == msg.sender,"Owner of the game can only create monsters.");
 
-        uint mosterId = monsters.legth;
+        uint mosterId = monsters.length;
         monsters.push(Monster(_monsterName, 1, 100, 100));
 
         // create new monster
@@ -48,20 +48,21 @@ contract CryptoMonsters is ERC721BasicToken
    * @param _monsterId monster 1   
    * @param _targetMonsterId monster 2
    */
-    function battle(uint _monsterId, uint _targetMonsterId) public onlyOwnerOf(_monsterId) {
+    function battle(uint _monsterId, uint256 _targetMonsterId) public 
+    {  
         Monster storage monster1 = monsters[_monsterId];
         Monster storage monster2 = monsters[_targetMonsterId];
-
-        if(monster1.attachPower >= monster2.defensePower ){
-            monster1.legth += 1; // level up, monster 1 wins the battle
-            monster1.attachPower += 10;
+        if(monster1.attackPower >= monster2.defensePower )
+        {
+            monster1.level += 1; // level up, monster 1 wins the battle
+            monster1.attackPower += 10;
         }
         else
         {
-            monster2.legth += 1; // level up, monster 2 wins the battle
+            monster2.level += 1; // level up, monster 2 wins the battle
             monster2.defensePower += 10;
         }
-    }
+    }    
 }
 
  
