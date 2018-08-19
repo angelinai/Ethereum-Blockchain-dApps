@@ -3,13 +3,20 @@
 This is a very basic intro repo with solidity contracts. It's intended to be a display for educational purpose only.
 I've used Truffle for project templated, truffle is also the general tool used for compiling.
  
-## Project Folders Outline
- 
-## HelloWorld folder
+## Projects Outline
 
-Basic hello world implementaion.
+## ERC721 Non-Fungible Token Project
 
-## FoodSafe folder   
+### Crypto Monsters Blockchain Game
+----
+ERC721 solidity contract token implementaion.
+Simple solidity game on the blockchain. Create
+Crypto Monsters much like an over simplified version of 
+Crypto Kitties.
+Create Monster > give it level attack power, defense power and make it battle other monster that you've created. 
+
+
+## FoodSafe Project 
 
 End to end sample app(dapp) with Ethereum.
 
@@ -29,6 +36,10 @@ End to end sample app(dapp) with Ethereum.
 
   Utilize Webpack
       > Take all assets through the webpack module bundler
+
+## HelloWorld Project
+
+Basic hello world solidity contract implementaion.
 
 ## Deployment
 ---

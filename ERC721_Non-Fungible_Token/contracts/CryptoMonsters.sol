@@ -1,10 +1,15 @@
 pragma solidity ^0.4.24;
 
 import "./ERC721BasicToken.sol";
-
-//Our Own Token, inherits from ERC721BasicToken
+ 
+/**
+* @dev CryptoMonsters Token, inherits from ERC721BasicToken
+*/
 contract CryptoMonsters is ERC721BasicToken
 {
+    /**
+    * @dev Monster class
+    */
     struct Monster {
         string name;
         uint level;
@@ -14,17 +19,16 @@ contract CryptoMonsters is ERC721BasicToken
 
     // array of monsters, keep track of all born mosters
     Monster[] public monsters; // you can use mapping, array used for simplicity
-    address public owner; // moster master / owner
-
-    
-    // CONSTRUCTOR - keep track of owner and owner address in constructor
+    address public owner; // moster owner
+  
+    /**
+    * @dev Constructor
+    * keep track of owner and owner address in constructor
+    */
     constructor() public {
         owner = msg.sender;
-    }  
-    /*  function CryptoMonsters() public {  // use it as function for now, TBD change to constructor()
-        owner = msg.sender;
-    }*/
- 
+    }      
+    
    /**
    * @dev Create new monster, with name _monsterName and address owner _ownerToAddress
    * @param _monsterName string - The name of the monster
@@ -36,15 +40,15 @@ contract CryptoMonsters is ERC721BasicToken
         require(owner == msg.sender,"Owner of the game can only create monsters.");
 
         uint mosterId = monsters.length;
-        monsters.push(Monster(_monsterName, 1, 100, 100));
+        // create with default level/attackPower/defensePower
+        monsters.push(Monster(_monsterName, 1, 100, 100)); 
 
         // create new monster
         _mint(_ownerToAddress, mosterId);
     } 
  
-     /**
-   * @dev Monsters battle, moster 1 battles monster 2
-   * NOTE: onlyOwnerOf spec - only the owner of teh onlyOwnerOf specified can control the monster and make it battle
+   /**
+   * @dev Monsters battle, moster 1 battles monster 2 
    * @param _monsterId monster 1   
    * @param _targetMonsterId monster 2
    */
@@ -52,7 +56,7 @@ contract CryptoMonsters is ERC721BasicToken
     {  
         Monster storage monster1 = monsters[_monsterId];
         Monster storage monster2 = monsters[_targetMonsterId];
-        if(monster1.attackPower >= monster2.defensePower )
+        if(monster1.attackPower >= monster2.defensePower)
         {
             monster1.level += 1; // level up, monster 1 wins the battle
             monster1.attackPower += 10;
