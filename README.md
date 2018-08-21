@@ -18,7 +18,9 @@ Create Monster > give it level attack power, defense power and make it battle ot
 
 ## FoodSafe Project 
 
-End to end sample app(dapp) with Ethereum.
+End to end sample distributed application (dapp) running on the Ethereum blockchain.
+
+Tech: Web3.js, Ethereum, Solidity, Truffle, Metamask, Webpack. 
 
   Goals
 
