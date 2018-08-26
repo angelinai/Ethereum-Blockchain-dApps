@@ -80,3 +80,42 @@ module.exports = {
   }
 };
 ```
+Truffle Console
+Interract with your contract via Truffle Console
+
+```
+PS <...>\Ethereum-Solidity\FoodSafe> truffle console
+
+truffle(development)> var fs
+undefined
+
+truffle(development)> FoodSafe.deployed().then(function(deployed){fs=deployed;});
+undefined
+
+PS C:\Users\Angelina\Desktop\GIT\Ethereum-Solidity\FoodSafe> truffle console
+
+truffle(development)> var fs
+undefined
+
+truffle(development)> FoodSafe.deployed().then(function(deployed){fs=deployed;});
+undefined
+
+truffle(development)> fs.AddNewLocation(123456, "The Store","sdsd");
+{ tx: '0x29dd21908fdc3321699fe077494b136a8b92025061439ab979870fda92a6e5ca',
+  receipt:
+   { transactionHash: '0x29dd21908fdc3321699fe077494b136a8b92025061439ab979870fda92a6e5ca',
+     transactionIndex: 0,
+     blockHash: '0xb8152b6a92f7dcae61d766bba8713bcf297258c83f1f8eb2dfafb5fe23ad3226',
+     blockNumber: 7,
+     gasUsed: 117140,
+     cumulativeGasUsed: 117140,
+     contractAddress: null,
+     logs: [],
+     status: 1 },
+  logs: [] }
+  
+truffle(development)> truffle(development)> fs.GetLocation(0);
+[ 'The Supplier',
+  BigNumber { s: 1, e: 5, c: [ 123456 ] },
+  BigNumber { s: 1, e: 0, c: [ 0 ] } ]
+  ```
