@@ -7,9 +7,12 @@ import { default as contract } from 'truffle-contract'
 
 // Import our contract artifacts and turn them into usable abstractions.
 import metaCoinArtifact from '../../build/contracts/MetaCoin.json'
+import foodSafeArtifact from '../../build/contracts/FoodSafe.json'
 
 // MetaCoin is our usable abstraction, which we'll use through the code below.
 const MetaCoin = contract(metaCoinArtifact)
+const FoodSafe = contract(foodSafeArtifact)
+
 
 // The following code is simple to show off interacting with your contracts.
 // As your needs grow you will likely need to change its form and structure.
@@ -22,7 +25,8 @@ const App = {
     const self = this
 
     // Bootstrap the MetaCoin abstraction for Use.
-    MetaCoin.setProvider(web3.currentProvider)
+    //MetaCoin.setProvider(web3.currentProvider)
+    FoodSafe.setProvider(web3.currentProvider)
 
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function (err, accs) {
@@ -39,14 +43,20 @@ const App = {
       accounts = accs
       account = accounts[0]
 
-      self.refreshBalance()
+      
+
+
+     // self.refreshBalance()
     })
   },
+
+    /*
 
   setStatus: function (message) {
     const status = document.getElementById('status')
     status.innerHTML = message
   },
+
 
   refreshBalance: function () {
     const self = this
@@ -63,6 +73,7 @@ const App = {
       self.setStatus('Error getting balance; see log.')
     })
   },
+ 
 
   sendCoin: function () {
     const self = this
@@ -84,7 +95,9 @@ const App = {
       self.setStatus('Error sending coin; see log.')
     })
   }
+  */
 }
+ 
 
 window.App = App
 
