@@ -3,10 +3,10 @@ require('babel-register')
 
 module.exports = {
   networks: {
-    ganache: {
-      host: '127.0.0.1',
-      port: 7545,
-      network_id: '*' // Match any network id
-    }
+    development: {
+      host: "localhost", // local testRPC host
+      port: 8545, // local testRPC port
+      network_id: "*" // Match any network id
+    } 
   }
 }
