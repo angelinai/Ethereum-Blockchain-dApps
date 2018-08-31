@@ -60,7 +60,7 @@ const App = {
   },
   // upload contract to the blockchain 
   createContract: function(){
-    foodsafeContract.new("", {from: account, data:foodSafeCode, gas:3000000}, function(error, deployedContract){
+    foodsafeContract.new("", {from: account, data:foodSafeBinaryCode, gas:3000000}, function(error, deployedContract){
         if(deployedContract.address){
           document.getElementById("contractAddress").value = deployedContract.address;
         }
